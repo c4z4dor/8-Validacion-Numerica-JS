@@ -1,0 +1,18 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  
+}
+
+
+.contenedor{
+    background-color: aqua;
+    text-align: center;
+    width: 90%;
+    max-width: 400px;
+    border-radius: 2em;
+    padding: 5em 4em;
+
+    
+}

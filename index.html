@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos.css">
+    <title>8.- Validacion Numerica</title>
+    <script>
+                function solonumeros(e){
+                    key=e.keyCode || e.wich;
+                    teclado=String.fromCharCode(key);
+                    numeros="0123456789";
+                    especiales="8-37-38-46";
+                    teclado_especial=false;
+
+                    for(var i in especiales){
+                    if(key==especiales[i]){
+                        teclado_especial=true;
+                    }
+                    }
+                    if(numeros.indexOf(teclado)==-1 && !teclado_especial){
+                        return false;
+                    }
+                }
+    </script>
+</head>
+<body>
+    <div class="contenedor">
+    <article>
+        <form>
+            <h1>Validacion numerica</h1>
+            
+            <h3> Ingrese solo numeros </h3>
+            
+            <input type="text" name="Numero" onkeypress="return solonumeros(event)" onpaste="return false">
+    
+        </form>
+    </article>
+    </div>
+</body>
+</html>
